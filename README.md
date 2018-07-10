@@ -1,14 +1,8 @@
-# cl-waifu2x
+# waifu2x-bash
 
-**WARNING: This software is under active development and not yet inteded for
-production or use by end-users. It is not yet optimized. Tread with caution.**
+This is a command line background manager for personal use. It adjusts the background image to proper size, rename and rearrange files. Many parameters in the scripts are hardcoded so you may need to change these values accrodingly.
 
-cl-waifu2x is an implementation of the waifu2x algorithm in OpenCL. It focuses
-on use of the neural network algorithm, not its training, and therefore it
-relies on models produced with the original waifu2x.
-
-cl-waifu2x aims to be compatible with most mainstream OpenCL implementations,
-including GPU-based and CPU-based ones from major vendors.
+**WARNING: The Python Waifu2x code used here is not yet optimized. Tread with caution.**
 
 Based on [waifu2x by nagadomi](https://github.com/nagadomi/waifu2x).
 
@@ -33,16 +27,9 @@ And an OpenCL implementation.
     100.0%...Done
     29004 pixels/sec
     925359122 ops/sec
-
-OpenCL implementations that are being used for testing:
-* Intel (CPU) (test platform: Intel Core i7 3820QM)
-* Nvidia (GPU) (test platform: Nvidia GeForce GTX 660M)
+    
+Before 
 
 ## Performance
 
-The current kernel is very dumb and not yet GPU-optimized. Performance is
-currently about equal on CPU and GPU, and about 6 times slower than the original
-waifu2x CUDA version on the same GPU, though also several times faster than
-the trivial
-[single-threaded waifu2x.py](tools/waifu2x.py)
-on the same CPU.
+This script is for Mac so there is no much difference 
