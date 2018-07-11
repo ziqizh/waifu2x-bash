@@ -32,7 +32,7 @@ And an OpenCL implementation.
 Before running script, first run the sample once and record your choices. For example, your input is '1' for the prompt "Choice [0]". 
 
 ### Update automated script
-Open '<expect>' and find '<send "\n">' lines. Put your values in accrodingly.
+Open 'expect' and find 'send ""' lines. Put your values in accrodingly.
 
 ## Performance
 
