@@ -1,0 +1,16 @@
+#!/bin/bash
+shopt -s extglob
+for filename in ../*@(.jpg|.png); do
+   width=$(identify -format '%w' $filename)
+   if ((width < 1440));
+   then 
+      echo "Image too small: Deleting..."
+      rm $filename
+      continue
+   elif ((width < 2800));
+   then
+      name=$(LC_CTYPE=C sed 's/^.*\///' <<< "$filename")
+      echo "Current image $name width: $width, resizing..."
+      ./expect $name $name
+   fi
+done

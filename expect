@@ -1,0 +1,12 @@
+#!/usr/bin/expect
+set timeout 0
+set pass "0\n"
+set input [lindex $argv 0]
+set output [lindex $argv 1]
+spawn python2 cl-waifu2x.py ../$input $output models/scale2.0x_model.json
+
+expect -re "^Choice"
+send "0\n"
+expect -re "^Choice,"
+send "2\n"
+interact
