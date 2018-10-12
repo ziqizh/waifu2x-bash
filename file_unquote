@@ -1,0 +1,9 @@
+#!/bin/bash
+shopt -s extglob
+#Find maximum
+python << END
+import os
+import urllib
+for filename in os.listdir("."):
+	os.rename(filename, urllib.unquote(filename))
+END
